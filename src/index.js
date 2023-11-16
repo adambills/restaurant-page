@@ -1,2 +1,6 @@
 import './style.scss';
-import homePage from './home-page/home.js';
+import generateHeaderFooter from './header-footer.js';
+import generateHomePage from './home.js';
+
+generateHeaderFooter();
+generateHomePage();

@@ -1,71 +1,72 @@
-// @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@500&family=Roboto:ital,wght@0,400;0,500;1,400&family=Seaweed+Script&display=swap');
-
-// @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:ital,wght@1,200&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@500&family=Roboto:ital,wght@0,400;0,500;1,400&family=Seaweed+Script&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&family=Seaweed+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&family=Seaweed+Script&display=swap");
 
 html {
-    height: 100%;
-    box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
 
-    body {
-        @extend html;
-        background: url('./home-page/headlight.jpg') no-repeat;
-        background-size: 100%;
-        background-position: center;
-    }
+  body {
+    @extend html;
+    background: url("./headlight.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 #content {
-    border: 1px solid black;
-    height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+  border: 1px solid black;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+  color: #3d3535;
+
+  header {
+    font-family: "Seaweed Script", cursive;
+    font-size: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-items: center;
-    color: #3d3535;
+    background-color: rgba(0, 143, 204, 0.2);
 
-    header {
-        font-family: 'Seaweed Script', cursive;
-        font-size: 3rem;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        * {
-            margin: 0 1.5rem;
-        }
+    * {
+      margin: 0 1.5rem;
     }
+  }
 
-    main {
-        align-self: self-start;
-        margin-top: 8rem;
-        font-family: 'Raleway', sans-serif;
-        font-style: italic;
-        font-size: 1.25rem;
+  main {
+    align-self: self-start;
+    margin-top: 8rem;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.25rem;
+    grid-row: 2;
+    &.home {
+      @extend main;
+      font-style: italic;
     }
+  }
 
-    footer {
-        justify-self: end;
-        padding: 2px;
-        font-size: 0.8rem;
+  footer {
+    justify-self: end;
+    padding: 2px;
+    font-size: 0.8rem;
+    grid-row: 3;
 
-        div {
-            color: rgb(146, 146, 146);
+    div {
+      color: rgb(146, 146, 146);
 
-            a {
-                @extend div;
-            }
-        }
+      a {
+        @extend div;
+      }
     }
-
+  }
 }
