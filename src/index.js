@@ -5,14 +5,16 @@ import generateMenu from './menu.js';
 import generateContactPage from './contact.js';
 
 generateHeaderFooter();
-generateContactPage();
+generateHomePage();
 
-// const homeBtn = document.querySelector('#home');
-// const menuBtn = document.querySelector('#menu');
-// const contactBtn = document.querySelector('#contact');
+const homeBtn = document.querySelector('#home');
+const menuBtn = document.querySelector('#menu');
+const contactBtn = document.querySelector('#contact');
 
-// homeBtn.addEventListener
+homeBtn.addEventListener('click', generateHomePage);
+menuBtn.addEventListener('click', generateMenu);
+contactBtn.addEventListener('click', generateContactPage);
 
-//generateHomePage();
 
-// generateMenu();
+
+

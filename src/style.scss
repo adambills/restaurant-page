@@ -34,6 +34,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
     * {
       margin: 0 1.5rem;
     }
@@ -87,6 +88,7 @@ html {
       color: rgb(146, 146, 146);
       a {
         @extend div;
+        
       }
     }
   }
