@@ -1,5 +1,7 @@
 export default function generateMenu() {
     const main = document.querySelector('main');
+    main.innerHTML = '';
+    main.setAttribute('class', '');
     main.classList.add('menu');
 
     function generateMenuItem(item, price) {

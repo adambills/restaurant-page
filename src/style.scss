@@ -39,6 +39,14 @@ html {
     }
   }
 
+  @mixin card {
+    margin-top: 6rem;
+    font-size: 1.5rem;
+    background-color: rgba(251, 243, 242, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
   main {
     font-family: "Raleway", sans-serif;
     font-size: 1.25rem;
@@ -46,13 +54,10 @@ html {
     align-self: self-start;
     margin-top: 8rem;
     &.menu {
-      margin-top: 4rem;
-      background-color: rgba(209, 200, 199, 0.3);
+      @include card;
       display: grid;
-      grid-template-columns: 16rem 16rem;
+      grid-template-columns: 20rem 20rem;
       gap: 3rem;
-      padding: 2rem;
-      border-radius: 8px;
       div {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -64,6 +69,12 @@ html {
           grid-column: 1 / -1;
         }
       }
+    }
+    &.contact {
+      @include card;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 

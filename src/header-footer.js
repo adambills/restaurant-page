@@ -13,6 +13,7 @@ export default function generateHeaderFooter() {
     navLinks.forEach((link) => {
         const a = document.createElement('a');
         a.textContent = link;
+        a.setAttribute('id', link.toLowerCase());
         nav.appendChild(a);
     });
     header.appendChild(nav);   
